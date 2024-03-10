@@ -3,8 +3,7 @@
 import {cn} from "@/lib/utils";
 import React, {useEffect, useRef, useState} from "react";
 
-export const InfiniteMovingCards = ({items, direction = "left", speed = "fast", pauseOnHover = false, className,
-                                    }: {
+export const InfiniteMovingCards = ({items, direction = "left", speed = "fast", pauseOnHover = false, className,}: {
     items: {
         quote: string;
         name: string;
@@ -72,7 +71,7 @@ export const InfiniteMovingCards = ({items, direction = "left", speed = "fast", 
         <div
             ref={containerRef}
             className={cn(
-                "scroller relative z-20  max-w-7xl overflow-hidden  [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+                "scroller relative max-w-fit  overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_5%,white_95%,transparent)]",
                 className
             )}
         >
@@ -86,7 +85,8 @@ export const InfiniteMovingCards = ({items, direction = "left", speed = "fast", 
             >
                 {items.map((item) => (
                     <li
-                        className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
+                        className={"w-[350px] max-w-full relative rounded-2xl border " +
+                            "border-b-0 flex-shrink-0 border-slate-300 dark:border-slate-700 px-8 py-6 md:w-[450px]"}
                         style={{
                             background:
                                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
@@ -96,20 +96,21 @@ export const InfiniteMovingCards = ({items, direction = "left", speed = "fast", 
                         <blockquote>
                             <div
                                 aria-hidden="true"
-                                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-                            ></div>
-                            <span className=" relative z-20 text-sm leading-[1.6] text-gray-100 font-normal">
-                {item.quote}
-              </span>
+                                className={"bg-background rounded-2xl border-b-0 border flex-shrink-0 border-slate-300 " +
+                                    "dark:border-slate-700 user-select-none -z-1 pointer-events-none absolute " +
+                                    "-left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"}/>
+                            <span className=" relative z-20 text-sm leading-[1.6] text-primary font-normal">
+                                {item.quote}
+                            </span>
                             <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex flex-col gap-1">
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.name}
-                  </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    {item.title}
-                  </span>
-                </span>
+                                <span className="flex flex-col gap-1">
+                                    <span className=" text-sm leading-[1.6] text-muted-foreground font-normal">
+                                        {item.name}
+                                    </span>
+                                    <span className="bg text-sm leading-[1.6] text-muted-foreground font-normal">
+                                        {item.title}
+                                    </span>
+                                </span>
                             </div>
                         </blockquote>
                     </li>

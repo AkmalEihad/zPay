@@ -9,7 +9,7 @@ export default function reviewCard() {
         <InfiniteMovingCards
             items={testimoni}
             direction="right"
-            speed="slow"
+            speed="normal"
         />
     );
 }

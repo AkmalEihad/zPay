@@ -1,12 +1,11 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import {ThemeProvider} from "@/components/theme-provider";
-import "@/app/globals.css";
+import "@/styles/globals.css";
 import {Toaster} from "@/components/ui/toaster";
 import {Poppins} from 'next/font/google'
 import React from "react";
 import { Metadata } from 'next'
-
 export const metadata: Metadata = {
     title: 'ZNN Payment Gateway - zPay',
 }
@@ -24,7 +23,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <body className={poppins.className}>
         <ThemeProvider
             attribute="class"
-            defaultTheme="light">
+            defaultTheme="system">
 
             {/* Page Container */}
             <div

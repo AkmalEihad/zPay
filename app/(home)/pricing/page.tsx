@@ -32,7 +32,7 @@ export default function Pricing() {
                             RM 0.50 / Per Transaksi
                         </p>
                         <Separator className={"bg-muted-foreground mb-2"}/>
-                        <p className="leading-relaxed text-gray-600 dark:text-gray-400">
+                        <p className="text-pretty leading-relaxed text-gray-600 dark:text-gray-400">
                             Agensi Kerajaan & Agensi Bukan Kerajaan (NGO) sahaja
                         </p>
                     </div>
@@ -60,7 +60,7 @@ export default function Pricing() {
                             RM 1.50 / Per Transaksi
                         </p>
                         <Separator className={"bg-muted-foreground mb-2"}/>
-                        <p className="leading-relaxed text-gray-600 dark:text-gray-400">
+                        <p className="text-pretty leading-relaxed text-gray-600 dark:text-gray-400">
                             Terbuka kepada semua termasuk Perusahaan Kecil dan Sederhana (PKS)
                         </p>
                     </div>
@@ -86,7 +86,7 @@ export default function Pricing() {
                             RM 0.98 / Per Transaksi
                         </p>
                         <Separator className={"bg-muted-foreground mb-2"}/>
-                        <p className="leading-relaxed text-gray-600 dark:text-gray-400">
+                        <p className="text-pretty leading-relaxed text-gray-600 dark:text-gray-400">
                             Terbuka kepada semua termasuk Perusahaan Kecil dan Sederhana (PKS)
                         </p>
                     </div>

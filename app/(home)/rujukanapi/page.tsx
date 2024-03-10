@@ -52,7 +52,8 @@ export default function FormAPI() {
             <div className={"flex flex-col w-screen"}>
                 <div className={"flex flex-col items-center justify-center"}>
                     <h1 className={"max-w-[810px] font-black text-[56px]"}>Rujukan API</h1>
-                    <Separator className={"bg-white "}/>
+
+                    <Separator/>
                     <p className={"pt-2 text-muted-foreground pb-10"}>Untuk mendapatkan rujukan API, sila isi borang
                         dibawah.</p>
                 </div>

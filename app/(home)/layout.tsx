@@ -3,15 +3,15 @@ import Header from "@/components/header";
 import {ThemeProvider} from "@/components/theme-provider";
 import "@/app/globals.css";
 import {Toaster} from "@/components/ui/toaster";
-import {Roboto} from 'next/font/google'
+import {Poppins} from 'next/font/google'
 import React from "react";
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'zPay Next',
+    title: 'ZNN Payment Gateway - zPay',
 }
 
-const roboto = Roboto({
+const poppins = Poppins({
     weight: ['400', '700'],
     style: ['normal', 'italic',],
     subsets: ['latin'],
@@ -21,7 +21,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
 
     return (
         <html lang="en">
-        <body className={roboto.className}>
+        <body className={poppins.className}>
         <ThemeProvider
             attribute="class"
             defaultTheme="light">

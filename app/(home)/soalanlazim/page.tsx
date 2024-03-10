@@ -14,7 +14,6 @@ export default function SoalanLazim() {
                     <h1 className={"font-black text-[56px]"}>Soalan Lazim</h1>
                 </div>
                 <Separator/>
-
                 <div className={"space-y-[5px]"}>
                     <h1 className={"pt-4 font-black text-[45px]"}>Tetapan Akaun</h1>
                     <Card className={"px-5"}>

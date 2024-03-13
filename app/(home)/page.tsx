@@ -1,6 +1,8 @@
 import React from "react";
 import ReviewCard from "@/components/reviewCard"
+
 export default function Home() {
+
     return (
         <main
             className="flex items-center justify-center">

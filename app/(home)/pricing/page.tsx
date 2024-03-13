@@ -1,7 +1,7 @@
 "use client";
 
 import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
+import {Card1} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import Link from "next/link";
 import React from "react";
@@ -11,8 +11,8 @@ export default function Pricing() {
     return (
         <div className="container mx-auto px-4 py-16 lg:px-8 xl:max-w-7xl">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                <Card
-                    className="border border-accent bg-background p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none md:p-7 xl:p-5">
+                <Card1
+                    className="border border-accent dark p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none md:p-7 xl:p-5">
                     <svg
                         className="hi-outline hi-rectangle-stack mb-5 inline-block size-12 text-blue-600 dark:text-blue-500"
                         xmlns="http://www.w3.org/2000/svg"
@@ -41,10 +41,10 @@ export default function Pricing() {
                     <Link href={"/merchant/signup"}>
                         <Button className={"mt-4 rounded-full"}>Daftar</Button>
                     </Link>
-                </Card>
-                <div
-                    className={"rounded-xl border border-accent bg-background p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none md:p-7 xl:p-5"}>
-                    <svg
+                </Card1>
+                <Card1
+                    className="border border-accent dark p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none md:p-7 xl:p-5">
+                <svg
                         className="hi-outline hi-cube mb-5 inline-block size-12 text-blue-600 dark:text-blue-500"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -72,9 +72,9 @@ export default function Pricing() {
                     <Link href={"/merchant/signup"}>
                         <Button className={"mt-4 rounded-full"}>Daftar</Button>
                     </Link>
-                </div>
-                <div
-                    className="rounded-xl border border-accent bg-background p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none sm:col-span-2 md:p-7 lg:col-span-1 xl:p-5">
+                </Card1>
+                <Card1
+                    className="rounded-xl border border-accent  p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none sm:col-span-2 md:p-7 lg:col-span-1 xl:p-5">
                     <svg
                         className="hi-outline hi-cog mb-5 inline-block size-12 text-blue-600 dark:text-blue-500"
                         xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ export default function Pricing() {
                     <Link href={"/merchant/signup"}>
                         <Button className={"mt-4 rounded-full"}>Daftar</Button>
                     </Link>
-                </div>
+                </Card1>
             </div>
         </div>
     );

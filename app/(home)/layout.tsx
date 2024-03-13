@@ -1,11 +1,12 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import {ThemeProvider} from "@/components/theme-provider";
-import "@/styles/globals.css";
-import {Toaster} from "@/components/ui/toaster";
+import Footer from "@/components/footer"
+import Header from "@/components/header"
+import {ThemeProvider} from "@/components/theme-provider"
+import "@/styles/globals.css"
+import {Metadata} from 'next'
 import {Poppins} from 'next/font/google'
 import React from "react";
-import { Metadata } from 'next'
+import {Toaster} from "sonner";
+
 export const metadata: Metadata = {
     title: 'ZNN Payment Gateway - zPay',
 }
@@ -38,12 +39,11 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
 
                     {/* Page Section */}
                     <div className={"container mx-auto p-4 lg:px-[30px] py-[50px] xl:max-w-full"}>
-
                         {children}
-
                     </div>
+
                 </main>
-                <Toaster/>
+                <Toaster />
                 <Footer/>
             </div>
         </ThemeProvider>

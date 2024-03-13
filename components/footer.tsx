@@ -3,7 +3,7 @@
 
 export default function Footer() {
     return (
-        <footer className="flex flex-none items-center bg-background">
+        <footer className="flex flex-none items-center bg-white dark:bg-zinc-950 backdrop-filter backdrop-blur-lg bg-opacity-40">
             <div
                 className="container mx-auto flex flex-col px-4 text-center text-sm md:flex-row md:justify-between md:text-left  xl:max-w-7xl">
                 <div className="pb-1 pt-4 md:pb-4">

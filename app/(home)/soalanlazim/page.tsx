@@ -8,16 +8,16 @@ import {Separator} from "@/components/ui/separator"
 export default function SoalanLazim() {
     return (
         <Card
-            className="flex items-center justify-center bg-background px-8 py-8 pt-2  ">
+            className="flex items-center justify-center bg-white dark:bg-black backdrop-filter backdrop-blur-lg bg-opacity-40 px-8 py-8 pt-2  ">
             <div className={"flex flex-col w-screen"}>
                 <div className={"flex flex-col items-center justify-center"}>
-                    <h1 className={"font-black text-[40px] xl:text-[56px] p-2"}>
+                    <h1 className={"font-black text-[40px] p-2"}>
                         Soalan Lazim
                     </h1>
                 </div>
                 <Separator className={"m-2"}/>
                 <div className={"space-y-[5px]"}>
-                    <h1 className={"pt-4 font-black text-[29px] xl:text-[45px]"}>
+                    <h1 className={"pt-4 font-black text-[30px]"}>
                         Tetapan Akaun
                     </h1>
                     <Card className={"px-5"}>
@@ -47,7 +47,7 @@ export default function SoalanLazim() {
                         </Accordion>
                     </Card>
 
-                    <h1 className={"pt-4 font-black text-[29px] xl:text-[45px]"}>
+                    <h1 className={"pt-4 font-black text-[30px]"}>
                         Pendaftaran & Pengesahan
                     </h1>
                     <Card className={"px-5"}>
@@ -112,7 +112,7 @@ export default function SoalanLazim() {
                         </Accordion>
                     </Card>
 
-                    <h1 className={"pt-4 font-black text-[29px] xl:text-[45px]"}>
+                    <h1 className={"pt-4 font-black text-[30px]"}>
                         Kredit dan Prabayar
                     </h1>
                     <Card className={"px-5"}>
@@ -131,7 +131,7 @@ export default function SoalanLazim() {
                         </Accordion>
                     </Card>
 
-                    <h1 className={"pt-4 font-black text-[29px] xl:text-[45px]"}>
+                    <h1 className={"pt-4 font-black text-[30px]"}>
                         Kaedah Pembayaran</h1>
                     <Card className={"px-5"}>
                         <Accordion type="single" collapsible>
@@ -151,7 +151,7 @@ export default function SoalanLazim() {
                         </Accordion>
                     </Card>
 
-                    <h1 className={"pt-4 font-black text-[29px] xl:text-[45px]"}>
+                    <h1 className={"pt-4 font-black text-[30px]"}>
                         Settlement
                     </h1>
                     <Card className={"px-5"}>

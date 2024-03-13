@@ -9,13 +9,28 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-2xl border bg-card text-card-foreground shadow-sm",
+      "rounded-2xl border dark:border-neutral-700 border-neutral-200 bg-gray-50 dark:bg-zinc-800 text-card-foreground shadow-sm",
       className
     )}
     {...props}
   />
 ))
 Card.displayName = "Card"
+// eslint-disable-next-line react/display-name
+const Card1 = React.forwardRef<
+    HTMLDivElement,
+    React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+    <div
+        ref={ref}
+        className={cn(
+            "rounded-2xl border bg-white dark:bg-gray-950 text-card-foreground shadow-sm",
+            className
+        )}
+        {...props}
+    />
+))
+Card1.displayName = "Card1"
 
 const CardHeader = React.forwardRef<
   HTMLDivElement,
@@ -76,4 +91,4 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export { Card, Card1, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }

@@ -1,6 +1,7 @@
+
 import logo from "@/app/image/logo.png"
 import {Button} from "@/components/ui/button"
-import {SignUp} from "@/components/user-signup-form"
+import UserSignupForm from "@/components/user-signup-form"
 import {Metadata} from "next"
 import Image from "next/image"
 import Link from "next/link"
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 }
 
 export default function RegisterPage() {
+
     return (
         <main>
             <div
@@ -26,7 +28,11 @@ export default function RegisterPage() {
                 <div className="relative hidden h-full flex-col bg-muted p-10 text-white lg:flex dark:border-r">
                     <div className="absolute inset-0 bg-zinc-900"/>
                     <div className="relative flex items-end justify-start text-lg font-medium ">
-                        <Image src={logo} alt={"logo"} width={"60"} height={"60"}/>
+                        <Link href={'/'}>
+                            <Button variant={"ghost"} className={"hover:bg-neutral-700"}>
+                                <Image src={logo} alt={"logo"} width={"60"} height={"60"}/>
+                            </Button>
+                        </Link>
                     </div>
                     <div className="relative z-20 mt-auto">
                         <blockquote className="space-y-2">
@@ -51,7 +57,7 @@ export default function RegisterPage() {
                                 Enter your email below to create your account
                             </p>
                         </div>
-                        <SignUp/>
+                        <UserSignupForm/>
 
                         <p className="px-8 text-center text-sm text-muted-foreground">
                             By clicking continue, you agree to our{" "}

@@ -1,12 +1,11 @@
 "use client"
-
 import {Button} from "@/components/ui/button"
-import { Lock } from 'lucide-react';
 import {Icons} from "@/components/ui/icons"
 import {Input} from "@/components/ui/input"
 import {Label} from "@/components/ui/label"
 import {cn} from "@/lib/utils"
 import {createClientComponentClient} from "@supabase/auth-helpers-nextjs"
+import {Lock} from 'lucide-react';
 import Link from "next/link";
 import {useRouter} from "next/navigation";
 import * as React from "react";
@@ -16,7 +15,7 @@ import {toast, Toaster} from "sonner";
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
-export default function Login({className, ...props}: UserAuthFormProps) {
+export default function UserLoginForm({className, ...props}: UserAuthFormProps) {
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
     async function onSubmit(event: React.SyntheticEvent) {
@@ -28,12 +27,13 @@ export default function Login({className, ...props}: UserAuthFormProps) {
         setTimeout(() => {
             setIsLoading(false)
         }, 3000)
+
     }
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const router = useRouter();
-    const [user, setUser] = useState<any>(null);
+    const [,setUser] = useState<any>(null);
     const supabase = createClientComponentClient();
 
     useEffect(() => {
@@ -47,25 +47,23 @@ export default function Login({className, ...props}: UserAuthFormProps) {
 
 
     const handleSignIn = async () => {
-        const res = await supabase.auth.signInWithPassword({
+        const {data:user , error} = await supabase.auth.signInWithPassword({
             email,
             password
         })
-        setUser(res.data.user)
-        router.push('/')
-        router.refresh();
-        setEmail('')
-        setPassword('')
+
+        if (error) {
+            toast.error(error.message);
+            return;
+        }
+
+        setUser(user);
+        setEmail('');
+        setPassword('');
+        toast.success('Successfully Logged In');
+        router.push("/");
     };
 
-    const handleBoth = () => {
-        handleSignIn();
-        toast.success('Successfully Logged In');
-    }
-
-    if (user) {
-        return router.push('/')
-    }
 
     return (
         <div className={cn("grid gap-6", className)} {...props}>
@@ -102,12 +100,12 @@ export default function Login({className, ...props}: UserAuthFormProps) {
                     </div>
                     <div className={"flex flex-row-reverse"}>
                         <Link href={"/"} className={"flex justify-center items-end"}>
-                            <Lock size={20} strokeWidth={1.5} />
+                            <Lock size={20} strokeWidth={1.5}/>
                             <Label className={"cursor-pointer"}>Forgot Password?</Label>
                         </Link>
                     </div>
                     <Button
-                        onClick={handleBoth}
+                        onClick={handleSignIn}
                         disabled={isLoading}>
                         {isLoading && (
                             <Icons.spinner className="mr-2 h-4 w-4 animate-spin"/>

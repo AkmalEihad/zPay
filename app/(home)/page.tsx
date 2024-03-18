@@ -1,5 +1,5 @@
-import React from "react";
 import ReviewCard from "@/components/reviewCard"
+import React from "react";
 
 export default function Home() {
 

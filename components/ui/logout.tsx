@@ -36,7 +36,7 @@ export function LogoutPc() {
         return (
             <button
                 onClick={handleBoth}
-                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium ${pathname === "/merchant/signup" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                className={`group flex items-center space-x-2 rounded-xl border hover:bg-blue-50 border-transparent px-3 py-2 text-sm font-medium ${pathname === "/merchant/signup" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
             >
                 <svg xmlns="http://www.w3.org/2000/svg"
                      viewBox="0 0 24 24" fill="currentColor"
@@ -54,7 +54,7 @@ export function LogoutPc() {
     return (
         <Link
             href={'/merchant/signup'}
-            className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium ${pathname === "/merchant/signup" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+            className={`group flex items-center space-x-2 rounded-xl border border-transparent hover:bg-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/merchant/signup" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
         >
             <svg xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 24 24" fill="currentColor"
@@ -98,7 +98,7 @@ export function LogoutMobile() {
         return (
             <button
                 onClick={handleBoth}
-                className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/merchant/signup" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}>
+                className={`group flex items-center space-x-2 rounded-xl border hover:bg-blue-50 border-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/merchant/signup" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}>
                 <svg xmlns="http://www.w3.org/2000/svg"
                      viewBox="0 0 24 24" fill="currentColor"
                      className={`hi-mini hi-bold inline-block size-5 ${pathname === "/merchant/signup" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -115,7 +115,7 @@ export function LogoutMobile() {
     return (
         <Link
             href={"/merchant/signup"}
-            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/merchant/signup" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+            className={`group flex items-center space-x-2 rounded-xl border hover:bg-blue-50 border-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/merchant/signup" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
         >
             <svg xmlns="http://www.w3.org/2000/svg"
                  viewBox="0 0 24 24" fill="currentColor"

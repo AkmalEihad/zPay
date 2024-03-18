@@ -34,7 +34,7 @@ export default function Header() {
 
                             <Link
                                 href={"/"}
-                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium ${pathname === "/" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/" ? " text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
                             >
                                 <svg
                                     className={`hi-mini hi-users inline-block size-5  ${pathname === "/" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -54,7 +54,7 @@ export default function Header() {
 
                             <Link
                                 href={"/soalanlazim"}
-                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium ${pathname === "/soalanlazim" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/soalanlazim" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
                             >
                                 <svg
                                     className={`hi-mini hi-users inline-block size-5  ${pathname === "/soalanlazim" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -73,7 +73,7 @@ export default function Header() {
 
                             <Link
                                 href={"/rujukanapi"}
-                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium ${pathname === "/rujukanapi" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/rujukanapi" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
                             >
                                 <svg
                                     className={`hi-mini hi-code inline-block size-5 ${pathname === "/rujukanapi" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -91,7 +91,7 @@ export default function Header() {
 
                             <Link
                                 href={"/pricing"}
-                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium ${pathname === "/pricing" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/pricing" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      viewBox="0 0 24 24" fill="currentColor"
@@ -138,7 +138,7 @@ export default function Header() {
 
                         <Link
                             href={"/"}
-                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600 dark:border-transparent"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600 dark:border-transparent"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
                         >
                             <svg
                                 className={`hi-mini hi-bold inline-block size-5 ${pathname === "/" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -156,7 +156,7 @@ export default function Header() {
 
                         <Link
                             href={"/soalanlazim"}
-                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/soalanlazim" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/soalanlazim" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
                         >
                             <svg
                                 className={`hi-mini hi-bold inline-block size-5 ${pathname === "/soalanlazim" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -174,7 +174,7 @@ export default function Header() {
                         </Link>
                         <Link
                             href={"/rujukanapi"}
-                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/rujukanapi" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/rujukanapi" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
                         >
                             <svg
                                 className={`hi-mini hi-bold inline-block size-5 ${pathname === "/rujukanapi" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -192,7 +192,7 @@ export default function Header() {
 
                         <Link
                             href={"/pricing"}
-                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium ${pathname === "/pricing" ? "text-blue-600 bg-blue-100 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/pricing" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 24 24" fill="currentColor"

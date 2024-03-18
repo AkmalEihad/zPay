@@ -8,7 +8,7 @@ import {Separator} from "@/components/ui/separator"
 export default function SoalanLazim() {
     return (
         <Card
-            className="flex items-center justify-center bg-white dark:bg-black backdrop-filter backdrop-blur-lg bg-opacity-40 px-8 py-8 pt-2  ">
+            className="flex items-center justify-center bg-white dark:bg-black px-8 py-8 pt-2  ">
             <div className={"flex flex-col w-screen"}>
                 <div className={"flex flex-col items-center justify-center"}>
                     <h1 className={"font-black text-[40px] p-2"}>

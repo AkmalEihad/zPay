@@ -4,6 +4,7 @@ import {ThemeProvider} from "@/components/theme-provider"
 import "@/styles/globals.css"
 import {Metadata} from 'next'
 import {Poppins} from 'next/font/google'
+import NextTopLoader from 'nextjs-toploader';
 import React from "react";
 import {Toaster} from "sonner";
 
@@ -22,6 +23,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
     return (
         <html lang="en">
         <body className={poppins.className}>
+        <NextTopLoader/>
         <ThemeProvider
             attribute="class"
             defaultTheme="system">
@@ -43,7 +45,7 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
                     </div>
 
                 </main>
-                <Toaster />
+                <Toaster/>
                 <Footer/>
             </div>
         </ThemeProvider>

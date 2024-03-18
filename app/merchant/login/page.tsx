@@ -1,6 +1,6 @@
 import logo from "@/app/image/logo.png";
 import {Button} from "@/components/ui/button"
-import Login from "@/components/user-login-form"
+import UserLoginForm from "@/components/user-login-form";
 import {Metadata} from "next"
 import Image from "next/image";
 import Link from "next/link"
@@ -23,14 +23,18 @@ export default function LoginPage() {
                                 zPay - LOGIN
                             </h1>
                         </div>
-                        <Login />
+                        <UserLoginForm/>
                     </div>
                 </div>
 
                 <div className="relative hidden h-full flex-col bg-muted p-10 text-white lg:flex dark:border-l">
                     <div className="absolute inset-0 bg-zinc-900"/>
                     <div className="relative z-20 flex items-center justify-end text-lg font-medium">
-                        <Image src={logo} alt={"logo"} width={"60"} height={"60"}/>
+                        <Link href={'/'}>
+                            <Button variant={"ghost"} className={"hover:bg-neutral-700"}>
+                                <Image src={logo} alt={"logo"} width={"60"} height={"60"}/>
+                            </Button>
+                        </Link>
                     </div>
                     <div className="relative z-20 mt-auto">
                         <blockquote className="space-y-2">

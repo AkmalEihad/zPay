@@ -12,7 +12,7 @@ export default function Pricing() {
         <div className="container mx-auto px-4 py-16 lg:px-8 xl:max-w-7xl">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <Card1
-                    className="border border-accent dark p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none md:p-7 xl:p-5">
+                    className="rounded-xl border border-accent  p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none md:p-7 xl:p-5">
                     <svg
                         className="hi-outline hi-rectangle-stack mb-5 inline-block size-12 text-blue-600 dark:text-blue-500"
                         xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export default function Pricing() {
                     </Link>
                 </Card1>
                 <Card1
-                    className="border border-accent dark p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none md:p-7 xl:p-5">
+                    className="rounded-xl border border-accent  p-5 shadow-sm transition dark:border-gray-800 dark:shadow-none md:p-7 xl:p-5">
                 <svg
                         className="hi-outline hi-cube mb-5 inline-block size-12 text-blue-600 dark:text-blue-500"
                         xmlns="http://www.w3.org/2000/svg"

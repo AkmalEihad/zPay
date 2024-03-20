@@ -6,7 +6,7 @@ import logobank from "@/app/image/logoBank.png"
 
 export default function Footer() {
     return (
-        <footer className="flex flex-none items-center bg-geradient-to-r from-blue-900 to-blue-800">
+        <footer className="flex flex-none items-center bg-gradient-to-r from-blue-900 to-blue-800">
             <div
                 className="flex flex-col px-[74px] pt-[20px] pb-[32px] text-center text-sm md:flex-col md:justify-between md:text-left w-full">
 

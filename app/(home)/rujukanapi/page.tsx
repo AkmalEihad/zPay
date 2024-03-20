@@ -13,10 +13,9 @@ import {toast} from "sonner";
 export default function RujukanAPI() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log("Form submitted");
     };
     return (
-        <div className="max-w-full mx-auto rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+        <div className=" mx-auto rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
             <h2 className="font-bold text-[40px] text-center text-neutral-800 dark:text-neutral-200">
                 Rujukan API
             </h2>
@@ -33,7 +32,7 @@ export default function RujukanAPI() {
                     </LabelInputContainer>
                     <LabelInputContainer>
                         <Label htmlFor="phone">Nombor Telefon</Label>
-                        <Input id="phone" placeholder="Sila masukkan nombor telefon anda. tanpa -" type="number"/>
+                        <Input id="phone" placeholder="Sila masukkan nombor telefon anda. tanpa -" type="text"/>
                     </LabelInputContainer>
                 </div>
                 <LabelInputContainer className="mb-4">

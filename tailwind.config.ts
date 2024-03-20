@@ -1,5 +1,5 @@
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
-
+import {nextui} from "@nextui-org/react";
 
 
 /** @type {import('tailwindcss').Config} */
@@ -9,6 +9,7 @@ module.exports = {
         "./pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
+        "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     ],
     darkMode: "class",
     prefix: "",
@@ -89,6 +90,7 @@ module.exports = {
     },
     plugins: [require("tailwindcss-animate"),
         addVariablesForColors,
+        nextui(),
     ],
 };
 function addVariablesForColors({ addBase, theme }: any) {

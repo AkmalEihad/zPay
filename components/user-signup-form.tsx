@@ -36,6 +36,7 @@ export default function UserSignupForm({className, ...props}: UserAuthFormProps)
             const {data: {user}} = await supabase.auth.getUser()
             setUser(user)
         }
+        // noinspection JSIgnoredPromiseFromCall
         getUser();
     }, [supabase.auth])
 

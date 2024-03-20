@@ -2,7 +2,7 @@
 
 import logo from "@/app/image/logo.png";
 import {LogoutMobile, LogoutPc} from "@/components/ui/logout";
-import ModeToggle from "@/components/ui/modeToggle";
+import {Navbar} from "@nextui-org/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
@@ -15,8 +15,8 @@ export default function Header() {
 
 
     return (
-        <header
-            className={"z-1 flex flex-none items-center shadow-sm bg-white dark:bg-zinc-950 backdrop-filter backdrop-blur-lg bg-opacity-40"}>
+        <Navbar shouldHideOnScroll maxWidth={"full"}
+                className={"z-50 flex px-0 flex-none items-center shadow-sm bg-gradient-to-r from-blue-900 to-blue-800"}>
 
             <div className={"container mx-auto px-4 lg:px-[50px] xl:max-w-full "}>
                 <div className={"flex justify-between py-4"}>
@@ -24,7 +24,7 @@ export default function Header() {
                     <div className={"flex items-center"}>
                         <Link href="/"
                               className={"group inline-flex items-center space-x-2 text-lg font-bold tracking-wide text-gray-900 hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300"}>
-                            <Image className={"dark:invert-0 invert"} src={logo} alt={"logo"} width={50} height={50}/>
+                            <Image src={logo} alt={"logo"} width={60} height={25}/>
                         </Link>
                     </div>
 
@@ -34,10 +34,11 @@ export default function Header() {
 
                             <Link
                                 href={"/"}
-                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/" ? " text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                                className={`group flex justify-center items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm  font-medium hover:bg-blue-50 ${pathname === "/" ? "text-blue-600 bg-blue-50  font-semibold" : "text-white"} hover:text-blue-600 active:border-blue-100 `}
+
                             >
                                 <svg
-                                    className={`hi-mini hi-users inline-block size-5  ${pathname === "/" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
+                                    className={`hi-mini hi-users inline-block size-5  ${pathname === "/" ? 'opacity-100' : 'opacity-80'} group-hover:opacity-100 `}
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
@@ -49,15 +50,15 @@ export default function Header() {
                                         clipRule="evenodd"
                                     />
                                 </svg>
-                                <span>Home</span>
+                                <span className={"w-fit"}>Home</span>
                             </Link>
 
                             <Link
                                 href={"/soalanlazim"}
-                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/soalanlazim" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm  font-medium hover:bg-blue-50 ${pathname === "/soalanlazim" ? "text-blue-600 bg-blue-50  font-semibold" : "text-white"} hover:text-blue-600 active:border-blue-100 `}
                             >
                                 <svg
-                                    className={`hi-mini hi-users inline-block size-5  ${pathname === "/soalanlazim" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
+                                    className={`hi-mini hi-users inline-block size-5  ${pathname === "/soalanlazim" ? 'opacity-100' : 'opacity-80'} group-hover:opacity-100 `}
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 20 20"
                                     fill="currentColor"
@@ -73,10 +74,10 @@ export default function Header() {
 
                             <Link
                                 href={"/rujukanapi"}
-                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/rujukanapi" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm  font-medium hover:bg-blue-50 ${pathname === "/rujukanapi" ? "text-blue-600 bg-blue-50  font-semibold" : "text-white"} hover:text-blue-600 active:border-blue-100 `}
                             >
                                 <svg
-                                    className={`hi-mini hi-code inline-block size-5 ${pathname === "/rujukanapi" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
+                                    className={`hi-mini hi-users inline-block size-5  ${pathname === "/rujukanapi" ? 'opacity-100' : 'opacity-80'} group-hover:opacity-100 `}
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
                                     fill="currentColor"
@@ -91,11 +92,11 @@ export default function Header() {
 
                             <Link
                                 href={"/pricing"}
-                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/pricing" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:hover:text-white dark:active:border-gray-600`}
+                                className={`group flex items-center space-x-2 rounded-xl border border-transparent px-3 py-2 text-sm  font-medium hover:bg-blue-50 ${pathname === "/pricing" ? "text-blue-600 bg-blue-50  font-semibold" : "text-white"} hover:text-blue-600 active:border-blue-100 `}
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      viewBox="0 0 24 24" fill="currentColor"
-                                     className={`hi-mini hi-bold inline-block size-5 ${pathname === "/pricing" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
+                                     className={`hi-mini hi-users inline-block size-5  ${pathname === "/pricing" ? 'opacity-100' : 'opacity-80'} group-hover:opacity-100 `}
                                 >
                                     <path fillRule="evenodd"
                                           d="M14.615 1.595a.75.75 0 0 1 .359.852L12.982 9.75h7.268a.75.75 0 0 1 .548 1.262l-10.5 11.25a.75.75 0 0 1-1.272-.71l1.992-7.302H3.75a.75.75 0 0 1-.548-1.262l10.5-11.25a.75.75 0 0 1 .913-.143Z"
@@ -107,8 +108,6 @@ export default function Header() {
                             <LogoutPc/>
 
                         </nav>
-
-                        <ModeToggle/>
 
                         <div className={"lg:hidden"}>
                             <button
@@ -138,7 +137,7 @@ export default function Header() {
 
                         <Link
                             href={"/"}
-                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600 dark:border-transparent"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/" ? "text-blue-600 bg-blue-50  font-semibold" : "text-blue-600 dark:border-transparent"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
                         >
                             <svg
                                 className={`hi-mini hi-bold inline-block size-5 ${pathname === "/" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -156,7 +155,7 @@ export default function Header() {
 
                         <Link
                             href={"/soalanlazim"}
-                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/soalanlazim" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/soalanlazim" ? "text-blue-600 bg-blue-50  font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
                         >
                             <svg
                                 className={`hi-mini hi-bold inline-block size-5 ${pathname === "/soalanlazim" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -174,7 +173,7 @@ export default function Header() {
                         </Link>
                         <Link
                             href={"/rujukanapi"}
-                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/rujukanapi" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/rujukanapi" ? "text-blue-600 bg-blue-50  font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
                         >
                             <svg
                                 className={`hi-mini hi-bold inline-block size-5 ${pathname === "/rujukanapi" ? 'opacity-100' : 'opacity-25'} group-hover:opacity-100`}
@@ -192,7 +191,7 @@ export default function Header() {
 
                         <Link
                             href={"/pricing"}
-                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/pricing" ? "text-blue-600 bg-blue-50 dark:bg-zinc-700/75 dark:text-white font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
+                            className={`group flex items-center space-x-2 rounded-xl border border-blue-50 px-3 py-2 text-sm font-medium hover:bg-blue-50 ${pathname === "/pricing" ? "text-blue-600 bg-blue-50  font-semibold" : "text-blue-600"} hover:text-blue-600 active:border-blue-100 dark:text-gray-300 dark:hover:bg-zinc-700 dark:border-transparent dark:hover:text-white dark:active:border-gray-600`}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 24 24" fill="currentColor"
@@ -210,6 +209,6 @@ export default function Header() {
                     </nav>
                 </div>
             </div>
-        </header>
+        </Navbar>
     )
 }

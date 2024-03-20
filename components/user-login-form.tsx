@@ -42,6 +42,7 @@ export default function UserLoginForm({className, ...props}: UserAuthFormProps) 
             setUser(user)
         }
 
+        // noinspection JSIgnoredPromiseFromCall
         getUser();
     }, [supabase])
 

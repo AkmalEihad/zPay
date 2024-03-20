@@ -1,8 +1,10 @@
 "use client"
 
+import logo from "@/app/image/logo.png"
+import logobank from "@/app/image/logoBank.jpg"
 import {Separator} from "@/components/ui/separator";
 import Image from "next/image";
-import logobank from "@/app/image/logoBank.png"
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -12,23 +14,40 @@ export default function Footer() {
 
                 <div className="flex flex-col sm:flex-row w-full gap-4 text-white">
 
-                    <div className={"basis-2/6"}>
-                        1
+                    <div className={"flex flex-col basis-2/6"}>
+                        <div className={"flex text-xl font-bold w-full justify-start items-start"}>
+                            <Image src={logo} alt={"logo"} height={28}/>
+                        </div>
+                        <div className={"flex flex-col w-full justify-start items-start"}>
+                            <p className={"text-left mt-4"}>
+                                ZNN Sdn. Bhd.<br/>
+                                A05-08, One South Street Mall,<br/>
+                                Jalan SP 5/1,Serdang Perdana,<br/>
+                                Sri Kembangan, 43300, Selangor
+                            </p>
+                            <p className={"mt-2"}>
+
+                                <a href={"mailto:zpaymalaysia@gmail.com"}
+                                   className={"text-white hover:text-neutral-200 underline"}>
+                                    zpaymalaysia@gmail.com
+                                </a>
+                            </p>
+                        </div>
                     </div>
 
-                    <div className={"flex flex-col basis-2/6 "}>
+                    <div className={"flex flex-col basis-2/6 h-full"}>
                         <div className={"flex text-xl font-bold w-full justify-start items-start"}>
                             COMPANY
                         </div>
-                        <div className={"flex flex-col w-full justify-start items-start"}>
-                            <p className={"mt-4"}>About Us</p>
-                            <p className={"mt-4"}>Contact</p>
-                            <p className={"mt-4"}> Terms & Conditions</p>
+                        <div className={"flex flex-col w-full justify-start items-start h-full"}>
+                            <Link href={""}><p className={"mt-4"}>About Us</p></Link>
+                            <Link href={""}><p className={"mt-6"}>Contact</p></Link>
+                            <Link href={""}><p className={"mt-6"}>Terms & Conditions</p></Link>
                         </div>
                     </div>
 
                     <div className={"basis-2/6"}>
-                        <Image src={logobank} alt={"logobank"} width={500} height={200}/>
+                        <Image src={logobank} alt={"logobank"} height={152}/>
                     </div>
                 </div>
                 <Separator/>
